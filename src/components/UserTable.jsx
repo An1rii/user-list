@@ -1,10 +1,13 @@
-import PropTypes from 'prop-types';
+
 import Table from 'react-bootstrap/Table';
 import SearchUser from './SearchUser';
 
+
 function UserTable({ filter, search }) {
     return (
+
         <Table striped bordered hover>
+
             <thead>
             <tr>
                 <th>ID</th>
@@ -41,10 +44,7 @@ function UserTable({ filter, search }) {
     );
 }
 
-UserTable.propTypes = {
-    filter: PropTypes.array.isRequired,
-    search: PropTypes.string.isRequired,
-};
+
 
 export default UserTable;
 
