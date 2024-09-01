@@ -32,7 +32,7 @@ function UserTable({ filter, search }) {
                         <td>{item.phone}</td>
                         <td>
                             <img
-                                src={`./content/images/${item.image}.jpg`}
+                                src={`../content/images/${item.image}.jpg`}
                             />
                         </td>
                         <td>{item.phrase}</td>
