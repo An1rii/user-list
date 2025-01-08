@@ -1,0 +1,17 @@
+{
+  "id": "ID",
+  "favourite": "Favourite",
+  "name": "Name",
+  "age": "Age",
+  "phone": "Phone",
+  "image": "Image",
+  "phrase": "Phrase",
+  "video": "Video",
+  "Show Card": "Show Card",
+  "Show Table": "Show Table",
+  "Sort Name A-Z": "Sort Name A-Z",
+  "Sort Name Z-A": "Sort Name Z-A",
+  "User Filter": "User Filter",
+  "Sort ASC":"Sort ASC",
+  "Sort DESC":"Sort DESC"
+}

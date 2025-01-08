@@ -57,10 +57,12 @@ button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
 
+
 .display {
     display: flex;
-    gap: 1rem
+    gap: 1rem;
 }
+
 
 .pressButton {
     background-color: #111827;
@@ -101,4 +103,87 @@ button:focus-visible {
     .pressButton {
         padding: .75rem 1.5rem;
     }
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+
+.card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    width: 200px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+.video-player {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+.showContent {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    margin-right: 20rem;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+    margin-top: 11.3rem;
+}
+
+.showContent:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-5px);
+}
+
+.showContent:active {
+    box-shadow: none;
+    transform: translateY(-3px);
+}
+
+.showContent:disabled {
+    pointer-events: none;
+}
+.language{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 4rem
 }
