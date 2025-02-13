@@ -1,6 +1,5 @@
-import React from "react";
 import { FaStar } from "react-icons/fa";
-import { useTranslation } from "react-i18next"; // Додано для перекладів
+import { useTranslation } from "react-i18next";
 import SearchUser from "../search/SearchUser";
 
 function UserCardView({ userSearch, search, favorites, toggleFavorite }) {
@@ -12,7 +11,6 @@ function UserCardView({ userSearch, search, favorites, toggleFavorite }) {
         .filter((item) => SearchUser(item, search))
         .map((item, index) => (
           <div className="card" key={index}>
-            {/* Використання динамічного перекладу з i18next */}
             <h3>
               {t("name")}: {item.name}
             </h3>

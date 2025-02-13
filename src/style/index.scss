@@ -25,9 +25,10 @@ a {
   color: #646cff;
   text-decoration: none;
   transition: color 0.25s;
-}
-a:hover {
-  color: #535bf2;
+
+  &:hover {
+    color: #535bf2;
+  }
 }
 
 h1 {
@@ -49,12 +50,15 @@ button, .pressButton, .showContent {
 
 button {
   background-color: #1a1a1a;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus, button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+  &:hover {
+    border-color: #646cff;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
 }
 
 .pressButton {
@@ -63,9 +67,10 @@ button:focus, button:focus-visible {
   font-size: 1.125rem;
   font-weight: 600;
   padding: 0.75rem 1.2rem;
-}
-.pressButton:hover {
-  background-color: #374151;
+
+  &:hover {
+    background-color: #374151;
+  }
 }
 
 .showContent {
@@ -84,16 +89,18 @@ button:focus, button:focus-visible {
   text-align: center;
   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
   margin-top: 11.3rem;
-}
-.showContent:hover {
-  color: #fff;
-  background-color: #1a1a1a;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-5px);
-}
-.showContent:active {
-  box-shadow: none;
-  transform: translateY(-3px);
+
+  &:hover {
+    color: #fff;
+    background-color: #1a1a1a;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-5px);
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translateY(-3px);
+  }
 }
 
 /* Display Layouts */
@@ -115,11 +122,12 @@ button:focus, button:focus-visible {
   background-color: #f9f9f9;
   border-radius: 8px;
   text-align: center;
-}
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
 }
 
 .video-player {
@@ -148,6 +156,7 @@ button:focus, button:focus-visible {
     right: 8rem;
   }
 }
+
 @media (max-width: 1280px) {
   .dropdown-container {
     top: -2rem;
@@ -158,36 +167,44 @@ button:focus, button:focus-visible {
   .showContent {
     right: 5rem;
   }
-  .card {
-    width: 280px;
+  .card{
+    width:280px
   }
 }
+
 @media (max-width: 1024px) {
   .card {
     width: 270px;
   }
 }
+
 @media (max-width: 884px) {
   .custom-table {
     max-width: 884px;
   }
 }
 @media (max-width: 834px) {
-  .card {
-    width: 199px;
+  .card{
+    width:199px
   }
-  body.lang-uk .custom-table th {
-    font-size: 12px;
+body.lang-uk .custom-table {
+    th {
+      font-size: 12px;
+    }
   }
 }
+
 @media (max-width: 820px) {
   .card {
     width: 200px;
   }
-  body.lang-uk .custom-table th {
-    font-size: 12px;
+  body.lang-uk .custom-table {
+    th{
+      font-size: 12px;
+    }
   }
 }
+
 @media (max-width: 768px) {
   .card {
     width: 194px;
@@ -195,24 +212,30 @@ button:focus, button:focus-visible {
   .showContent {
     right: 2.5rem;
   }
-  body.lang-uk .custom-table th {
-    font-size: 8.5px;
-  }
-  body.lang-uk .custom-table body.lang-uk .custom-table {
-    margin-left: 20px;
+  body.lang-uk .custom-table {
+    th{
+      font-size: 8.5px;
+    }
+    body.lang-uk .custom-table {
+      margin-left: 20px;
+    }
   }
 }
 @media (max-width: 430px) {
-  body.lang-en .custom-table th, body.lang-en .custom-table td {
-    font-size: 4px;
+  body.lang-en .custom-table {
+      th,td{
+        font-size: 4px;
+      }
   }
-  .pressButton {
+  .pressButton{
     font-size: 0.5rem;
   }
-  .showContent {
+  .showContent{
     font-size: 0.5rem;
     min-height: 1px;
   }
+  .form-control{
+
+  }
 }
 
-/*# sourceMappingURL=index.css.map */

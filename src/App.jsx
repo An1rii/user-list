@@ -1,18 +1,27 @@
-import "./style/App.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SearchBar from "./components/search/SearchBar.jsx";
 import UserTable from "./components/user/UserTableContainer.jsx";
-import useFetchData from "./fetch/useFetchData.jsx";
 import { useTranslation } from "react-i18next";
 import "./i18n/index";
+import { fetchUsers } from "./redux/slice/userSlice";
 
 function App() {
   const { t } = useTranslation();
   const [search, setSearch] = useState("");
-  const { data: userData, loading, error } = useFetchData("/data.json");
+  const dispatch = useDispatch();
+  const {
+    list: userData,
+    loading,
+    error,
+  } = useSelector((state) => state.users);
   const [sortedData, setSortedData] = useState([]);
+
+  useEffect(() => {
+    dispatch(fetchUsers());
+  }, [dispatch]);
 
   const sortDataByName = (asc) => {
     const sorted = [...userData].sort((a, b) => {

@@ -1,13 +1,11 @@
-import React from "react";
 import Table from "react-bootstrap/Table";
 import { FaStar } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import SearchUser from "../search/SearchUser.js";
-import "../../i18n/index";
-
+import useUserActions from "../../redux/ReduxComponent/RemoveSetUsersToRedux.jsx";
 function UserTableView({ userSearch, search, favorites, toggleFavorite }) {
   const { t } = useTranslation();
-
+  const { handleRemoveUser } = useUserActions();
   return (
     <Table className="custom-table" striped bordered hover>
       <thead>
@@ -20,13 +18,14 @@ function UserTableView({ userSearch, search, favorites, toggleFavorite }) {
           <th>{t("image")}</th>
           <th>{t("phrase")}</th>
           <th>{t("video")}</th>
+          <th>{t("Actions")}</th>
         </tr>
       </thead>
       <tbody>
         {userSearch
           .filter((item) => SearchUser(item, search))
-          .map((item, index) => (
-            <tr key={index}>
+          .map((item) => (
+            <tr key={item.id}>
               <td>{item.id}</td>
               <td>
                 <FaStar
@@ -37,7 +36,6 @@ function UserTableView({ userSearch, search, favorites, toggleFavorite }) {
                   }}
                 />
               </td>
-
               <td>{item.name}</td>
               <td>{item.age}</td>
               <td>{item.phone}</td>
@@ -51,15 +49,14 @@ function UserTableView({ userSearch, search, favorites, toggleFavorite }) {
                 )}
               </td>
               <td>{item.phrase}</td>
+              <td>{item.video}</td>
               <td>
-                {item.video}
-                {/*    // ? (*/}
-                {/*    // <video*/}
-                {/*    //     className="video-player"*/}
-                {/*    //     src={`/content/videos/${item.video}.mp4`}*/}
-                {/*    //     controls*/}
-                {/*    // />*/}
-                {/*// ) : null}*/}
+                <button
+                  onClick={() => handleRemoveUser(item.id)}
+                  className="btn btn-danger"
+                >
+                  Remove
+                </button>
               </td>
             </tr>
           ))}
