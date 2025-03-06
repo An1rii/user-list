@@ -134,6 +134,11 @@ button:focus, button:focus-visible {
   margin-bottom: 4rem;
 }
 
+.user-image {
+  width: 50px;
+  height: 50px;
+}
+
 /* Responsive Styles */
 @media (max-width: 1440px) {
   .dropdown-container {
@@ -202,9 +207,57 @@ button:focus, button:focus-visible {
     margin-left: 20px;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 428px) {
+  body.lang-en .custom-table {
+    margin-left: -2.5rem;
+  }
   body.lang-en .custom-table th, body.lang-en .custom-table td {
-    font-size: 4px;
+    font-size: 7.5px;
+    margin-left: 2rem;
+  }
+  body.lang-en .custom-table .user-image {
+    width: 35px;
+    height: 35px;
+  }
+  body.lang-en .btn-danger {
+    width: 45px;
+    height: 23px;
+    font-size: 7px;
+  }
+  body.lang-en .showContent {
+    right: 2rem;
+  }
+  body.lang-uk .showContent {
+    top: -0.8rem;
+    right: 1rem;
+  }
+  body.lang-uk th {
+    font-size: 3px;
+  }
+  body.lang-uk .custom-table {
+    max-width: 400px;
+    margin-left: -3.1rem;
+  }
+  body.lang-uk .custom-table th {
+    font-size: 5px;
+  }
+  body.lang-uk .custom-table td {
+    font-size: 7px;
+  }
+  body.lang-uk .custom-table .btn-danger {
+    width: 48px;
+    height: 23px;
+    font-size: 7px;
+  }
+  body.lang-uk .custom-table .user-image {
+    width: 35px;
+    height: 35px;
+  }
+  .form-control {
+    margin-left: -2.6rem;
+  }
+  .display {
+    margin-left: -2.4rem;
   }
   .pressButton {
     font-size: 0.5rem;
@@ -212,6 +265,17 @@ button:focus, button:focus-visible {
   .showContent {
     font-size: 0.5rem;
     min-height: 1px;
+  }
+  body.lang-uk h1 {
+    font-size: 1.4rem;
+    line-height: 0.9;
+  }
+  .dropdown-container {
+    margin-left: -26px;
+  }
+  .card {
+    width: 360px;
+    margin-left: -1rem;
   }
 }
 

@@ -44,7 +44,7 @@ function UserTableView({ userSearch, search, favorites, toggleFavorite }) {
                   <img
                     src={`/content/images/${item.image}.svg`}
                     alt={item.image}
-                    style={{ width: "50px", height: "50px" }}
+                    className="user-image"
                   />
                 )}
               </td>
